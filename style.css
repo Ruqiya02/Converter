@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+@media screen and (min-width:801px) {
+    /* ---HEADER--- */
+.top{
+    background-color: rgba(245, 245, 246, 1);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.logo{
+    margin-top: 1.302vw;
+    margin-bottom: 1.042vw;
+    width: 7.726vw;
+    height: 1.997vw;
+}
+a{
+    margin-top: 1.476vw;
+    color: gray;
+}
+.signIn{
+    width: 5.035vw;
+    height: 2.865vw;
+    background-color: white;
+    border: 0;
+    margin-top: 0.5vw;
+    border-radius: 0.4vw;
+    color: black;
+    font-weight: 600;
+}
+a:hover{
+    cursor: pointer;
+    color: black;
+}
+    /* ---MAIN--- */
+h1{
+    width: 42vw;
+    text-align: right; 
+    margin-top: 4.861vw;
+    margin-bottom: 2.865vw;
+}
+.buttons{
+    display: flex;
+    width: 22.483vw;
+    height: 2.604vw;
+}
+.selection{
+    width: 5.648vw;
+    height: 2.604vw;
+    border: 0.087vw solid rgba(229, 229, 229, 1);
+    color: rgba(198, 198, 198, 1);
+    background-color: white;
+    }
+.first-bttn{
+    border-bottom-left-radius: 0.26vw;
+    border-top-left-radius: 0.26vw;
+}
+.last-bttn{
+    border-top-right-radius: 0.26vw;
+    border-bottom-right-radius: 0.26vw;
+}
+.selection:hover{
+    background-color: rgba(131, 58, 224, 1);
+    color: white;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    color: rgba(198, 198, 198, 1);
+    
+}
+p{
+    margin-bottom: 0.868vw;
+}
+.input-container{
+    width: 22.483vw;
+    height: 8.854vw;
+    border: 0.087vw solid rgba(229, 229, 229, 1);
+    border-radius: 0.26vw;
+    margin-top: 1.736vw;
+}
+input{
+    border: none;
+    width: 21vw;
+    height: 3.299vw;
+    margin-left: 1.215vw;
+    margin-top: 0.955vw;
+    font-size: 3.125vw;
+    font-weight: 900;
+}
+.main-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.online-price{
+    width: 10.33vw;
+    height: 2.431vw;
+}
+}
