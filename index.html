@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+        integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
     <title>Converter</title>
 </head>
 <body>
     <div class="top"> 
-        <img class="logo" src="/photos/logo.svg">
+        <img class="logo" src="./photos/logo.svg">
         <a>Bank</a>
         <a>Business</a>
         <a>Investments</a>
@@ -20,18 +24,18 @@
         <button class="signIn">Sign in</button>
     </div>
     <main>
-    <h1>Currency converter online</h1>
+    <div class="title"><h1>Currency converter online</h1></div>
     <div class="main-part">
     <div class="container">
         <p>I have</p>
         <div class="buttons">
-        <button class="selection first-bttn" >RUB</button>
+        <button class="selection first-bttn" id="selected" >RUB</button>
         <button class="selection">USD</button>
         <button class="selection">EUR</button>
         <button class="selection last-bttn">GBP</button>
         </div>
         <div class="input-container">
-        <input>
+        <input type="text">
         <div class="online-price"></div>
         </div>
     </div>
@@ -39,7 +43,7 @@
         <p>I want to buy</p>
         <div class="buttons">
         <button class="selection first-bttn" >RUB</button>
-        <button class="selection">USD</button>
+        <button class="selection" id="selected">USD</button>
         <button class="selection">EUR</button>
         <button class="selection last-bttn">GBP</button>
         </div>
@@ -50,5 +54,6 @@
     </div>
     </div>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>
