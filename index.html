@@ -22,6 +22,8 @@
         <a>Trips</a>
         <a>Entertainment</a>
         <button class="signIn">Sign in</button>
+        <!-- <ul></ul>
+        <img class="menuBar" src="./photos/burgermenuicon.svg"> -->
     </div>
     <main>
     <div class="title"><h1>Currency converter online</h1></div>
@@ -29,31 +31,32 @@
     <div class="container">
         <p>I have</p>
         <div class="buttons">
-        <button class="selection first-bttn" id="selected" >RUB</button>
-        <button class="selection">USD</button>
-        <button class="selection">EUR</button>
-        <button class="selection last-bttn">GBP</button>
+        <button value="RUB" class="selection-left first-bttn" id="selected" >RUB</button>
+        <button value="USD" class="selection-left">USD</button>
+        <button value="EUR" class="selection-left">EUR</button>
+        <button value="GBP" class="selection-left last-bttn">GBP</button>
         </div>
         <div class="input-container">
-        <input type="text">
+        <input class="inputLeft" type="text">
         <div class="online-price"></div>
         </div>
     </div>
     <div class="container">
         <p>I want to buy</p>
         <div class="buttons">
-        <button class="selection first-bttn" >RUB</button>
-        <button class="selection" id="selected">USD</button>
-        <button class="selection">EUR</button>
-        <button class="selection last-bttn">GBP</button>
+        <button value="RUB" class="selection-right first-bttn" >RUB</button>
+        <button value="USD" class="selection-right" id="selected">USD</button>
+        <button value="EUR" class="selection-right">EUR</button>
+        <button value="GBP" class="selection-right last-bttn">GBP</button>
         </div>
         <div class="input-container">
-        <input>
+        <input class="inputRight">
         <div class="online-currency"></div>
         </div>
     </div>
     </div>
     </main>
     <script src="app.js"></script>
+    <script src=""></script>
 </body>
 </html>

@@ -14,10 +14,8 @@
     justify-content: space-evenly;
 }
 .logo{
-    margin-top: 1.302vw;
-    margin-bottom: 1.042vw; 
-    width: 7.726vw;
-    height: 1.997vw;
+    width: 7.725999999999999vw;
+    height: 5vw;
 }
 a{
     color: gray;
@@ -55,7 +53,7 @@ h1{
     width: 22.483vw;
     height: 2.604vw;
 }
-.selection{
+.selection-left, .selection-right{
     width: 5.648vw;
     height: 2.604vw;
     border: 0.087vw solid rgba(229, 229, 229, 1);
@@ -70,9 +68,9 @@ h1{
     border-top-right-radius: 0.26vw;
     border-bottom-right-radius: 0.26vw;
 }
-.selection:hover{
+button:hover{
     cursor: pointer;
-} 
+}
 #selected{
     background-color: rgba(131, 58, 224, 1);
     color: white;
@@ -111,4 +109,118 @@ input{
     width: 10.33vw;
     height: 2.431vw;
 }
+.menuBar{
+    display: none;
+}
+}
+@media screen and (min-width:320px) and (max-width:800px){
+   /*---Head---*/
+.top{
+    background-color: rgba(245, 245, 246, 1);
+    align-items: center;
+    width: 100%;
+    height: 14vw;
+    display: flex;
+    justify-content: space-between; 
+}
+a{
+    display: none;
+}
+.menuBar{
+    width: 5vw;
+    height: 5vw;
+}
+.logo{
+    width: 20vw;
+    height: 15vw;
+}
+.signIn{
+    width: 15vw;
+    height: 8vw;
+    background-color: white;
+    border: 0;
+    border-radius: 1vw;
+    color: black;
+    font-weight: 600;
+    font-size: 2.5vw;
+}
+    /* ---MAIN--- */
+main{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+h1{
+    padding-left: 5vw; 
+}
+.buttons{
+    display: flex;
+    width: 40vw;
+    height: 7vw;
+}
+.selection-left, .selection-right{
+    width: 80vw;
+    height: 6vw;
+    border: 0.087vw solid rgba(229, 229, 229, 1);
+    color: rgba(198, 198, 198, 1);
+    background-color: white;
+    }
+.first-bttn{
+    border-bottom-left-radius: 0.9vw;
+    border-top-left-radius: 0.9vw;
+}
+.last-bttn{
+    border-top-right-radius: 0.9vw;
+    border-bottom-right-radius: 0.9vw;
+}
+button:hover{
+    cursor: pointer;
+}
+#selected{
+    background-color: rgba(131, 58, 224, 1);
+    color: white;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    color: rgba(198, 198, 198, 1);
+    }
+p{
+    margin-bottom: 0.868vw;
+}
+.input-container{
+    width: 40vw;
+    height: 20vw;
+    border: 0.087vw solid rgba(229, 229, 229, 1);
+    border-radius: 0.26vw;
+    margin-top: 1.736vw;
+}
+input{
+    outline: none;
+    border: none;
+    width: 40vw;
+    height: 10vw;
+    font-size: 7vw;
+    font-weight: 900;    
+}
+.main-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.online-price{
+    width: 40vw;
+    height: 10vw;
+}
+.menuBar{
+   
+}
+
 }
