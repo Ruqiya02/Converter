@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +12,9 @@
     </script>
     <title>Converter</title>
 </head>
+
 <body>
-    <div class="top"> 
+    <div class="top">
         <img class="logo" src="./photos/logo.svg">
         <a>Bank</a>
         <a>Business</a>
@@ -26,38 +28,41 @@
         <img class="menuBar" src="./photos/burgermenuicon.svg"> -->
     </div>
     <main>
-    <div class="title"><h1>Currency converter online</h1></div>
-    <div class="main-part">
-    <div class="container">
-        <p>I have</p>
-        <div class="buttons1">
-        <button value="RUB" id="selection-left" class="active" >RUB</button>
-        <button value="USD" id="selection-left">USD</button>
-        <button value="EUR" id="selection-left">EUR</button>
-        <button value="GBP" id="selection-left">GBP</button>
+        <div class="title">
+            <h1>Currency converter online</h1>
         </div>
-        <div class="input-container">
-        <input class="inputLeft" value="1" placeholder="input" >
-        <div class="online-price"></div>
+        <div class="main-part">
+            <div class="container">
+                <p>I have</p>
+                <div class="buttons1">
+                    <button id="selection-left" class="selected">RUB</button>
+                    <button id="selection-left">USD</button>
+                    <button id="selection-left">EUR</button>
+                    <button id="selection-left">GBP</button>
+                </div>
+                <div class="input-container">
+                    <input class="inputLeft" value="1" placeholder="input">
+                    <div class="online-price"></div>
+                </div>
+            </div>
+            <div class="container">
+                <p>I want to buy</p>
+                <div class="buttons2">
+                    <button id="selection-right">RUB</button>
+                    <button id="selection-right" class="seleted">USD</button>
+                    <button id="selection-right">EUR</button>
+                    <button id="selection-right">GBP</button>
+                </div>
+                <div class="input-container">
+                    <input class="inputRight" value="1" placeholder="output">
+                    <div class="online-currency"></div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <p>I want to buy</p>
-        <div class="buttons2">
-        <button value="RUB" id="selection-right" >RUB</button>
-        <button value="USD" id="selection-right" class="active" >USD</button>
-        <button value="EUR" id="selection-right">EUR</button>
-        <button value="GBP" id="selection-right">GBP</button>
-        </div>
-        <div class="input-container">
-        <input class="inputRight" value="1" placeholder="output">
-        <div class="online-currency"></div>
-        </div>
-    </div>
-    </div>
     </main>
     <script src="imask.js"></script>
     <script src="app.js"></script>
-    
+
 </body>
+
 </html>

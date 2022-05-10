@@ -1,7 +1,8 @@
-  let input = document.querySelector(".inputLeft")
-  let output = document.querySelector(".inputRight")
+  let inputLeft = document.querySelector(".inputLeft")
+  let inputRight = document.querySelector(".inputRight")
+  let from = 'RUB',to = 'USD'
   
-  let numberMask = IMask(input, {
+  let numberMask1 = IMask(inputLeft, {
     mask: Number,
     scale: 5,
     signed: false,
@@ -11,8 +12,7 @@
     radix: '.',
     mapToRadix: [','],
   });
-  
-  let numberMask1 = IMask(output, {
+  let numberMask2 = IMask(inputRight, {
     mask: Number,
     scale: 5,
     signed: false,
@@ -32,76 +32,68 @@
       numberPart.replace(thousands, " ") + (decimalPart ? "." + decimalPart : "")
     );
   }
-  
-  let from = 'RUB',
-    to = 'USD'
-  input.addEventListener('input', api1)
-  output.addEventListener('input', api2)
-  
+  function inputValue() {
+    fetch(`https://api.exchangerate.host/latest?base=${from}&symbols=${to}`)
+      .then(response => response.json())
+      .then(data => {
+        if(inputLeft.value==""){
+          inputRight.value=""
+        }
+        else{
+        inputRight.value = inputLeft.value.replace(/ /g, "") * Number(data.rates[Object.keys(data.rates)[0]])
+        inputRight.value = commify(inputRight.value)
+        }
+      })
+      .catch(error => {
+        console.log(`Error: ${error.message}`);
+      })
+  }
+  function outputValue() {
+    fetch(`https://api.exchangerate.host/latest?base=${to}&symbols=${from}`)
+      .then(response => response.json())
+      .then(data => {
+        if(inputRight.value==""){
+          inputLeft.value=""
+        }
+        else{
+        inputLeft.value = inputRight.value.replace(/ /g, "") * Number(data.rates[Object.keys(data.rates)[0]])
+        inputLeft.value = commify(inputLeft.value)
+        }
+      })
+      .catch(error => {
+        console.log(`Error: ${error.message}`);
+      })
+  }
+  inputLeft.addEventListener('input', inputValue)
+  inputRight.addEventListener('input', outputValue)
   let leftBtn = document.querySelectorAll(".buttons1 button")
   leftBtn.forEach((item) =>
     item.addEventListener('click', () => {
       leftBtn.forEach(item => {
-        item.classList.remove("active")
+        item.classList.remove("selected")
       });
-      item.classList.add("active");
+      item.classList.add("selected");
       from = item.innerHTML
-      api2()
-      available()
+      outputValue()
+      onlineCurrency()
     }))
   
   let rightBtn = document.querySelectorAll(".buttons2 button")
   rightBtn.forEach((item) =>
     item.addEventListener('click', () => {
       rightBtn.forEach(item => {
-        item.classList.remove("active")
+        item.classList.remove("selected")
       });
-      item.classList.add("active");
+      item.classList.add("selected");
       to = item.innerHTML
-      api1()
-      available()
+      inputValue()
+      onlineCurrency()
     }))
-  
-  function api1() {
-    fetch(`https://api.exchangerate.host/latest?base=${from}&symbols=${to}`)
-      .then(response => response.json())
-      .then(data => {
-        if(input.value==""){
-          output.value=""
-        }
-        else{
-        input.value=input.value.replace(/,/g,".")
-        output.value = input.value.replace(/ /g, "") * Number(data.rates[Object.keys(data.rates)[0]])
-        output.value = commify(output.value)
-        }
-      })
-      .catch(error => {
-        console.log(`Error: ${error.message}`);
-      })
-  }
-  
-  function api2() {
-    fetch(`https://api.exchangerate.host/latest?base=${to}&symbols=${from}`)
-      .then(response => response.json())
-      .then(data => {
-        if(output.value==""){
-          input.value=""
-        }
-        else{
-        output.value=output.value.replace(/,/g,".")
-        input.value = output.value.replace(/ /g, "") * Number(data.rates[Object.keys(data.rates)[0]])
-        input.value = commify(input.value)
-        }
-      })
-      .catch(error => {
-        console.log(`Error: ${error.message}`);
-      })
-  }
 
   let p1 = document.querySelector(".online-price")
   let p2 = document.querySelector(".online-currency")
   
-  function available() {
+  function onlineCurrency() {
     fetch(`https://api.exchangerate.host/latest?base=${from}&symbols=${to}`)
       .then(response => response.json())
       .then(data => {
@@ -120,6 +112,5 @@
         console.log(`Error: ${error.message}`);
       })
   }
-  
-  available()
-  api1()
+  onlineCurrency()
+  inputValue()
