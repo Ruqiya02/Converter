@@ -159,7 +159,7 @@ main{
 h1{
     padding-left: 5vw; 
 }
-.buttons{
+.buttons-Left .buttons-Right{
     display: flex;
     width: 40vw;
     height: 7vw;

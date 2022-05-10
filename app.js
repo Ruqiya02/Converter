@@ -1,22 +1,25 @@
 const inputLeft=document.querySelector(".inputLeft");
 const inputRight=document.querySelector(".inputRight");
+const rightButtons=document.querySelectorAll(".selection-right");
+const leftButtons=document.querySelectorAll(".selection-left");
+leftButtons.forEach((bttn)=>{
+    bttn.addEventListener("click",()=>{
+        bttn.style.backgroundColor="rgba(131, 58, 224, 1)"
+        bttn.style.color='white'
+        
+    })
+})
 function example(){
     fetch("https://api.exchangerate.host/latest?base=USD&symbols=RUB ")
     .then((res)=>{
         return res.json();
     }) 
     .then((data)=>{
-        console.log(data.base)
+        console.log(Object.values((data.rates)))
     })  
 }
-example()
-var numberMask = IMask(
-    document.getElementById('number-mask'),
-    {
-      mask: Number,
-      min: -10000,
-      max: 10000,
-      thousandsSeparator: ' '
-    });
+example();
+
+
 
 
