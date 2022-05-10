@@ -30,33 +30,34 @@
     <div class="main-part">
     <div class="container">
         <p>I have</p>
-        <div class="buttons">
-        <button value="RUB" class="selection-left first-bttn" id="selected" >RUB</button>
-        <button value="USD" class="selection-left">USD</button>
-        <button value="EUR" class="selection-left">EUR</button>
-        <button value="GBP" class="selection-left last-bttn">GBP</button>
+        <div class="buttons1">
+        <button value="RUB" id="selection-left" class="active" >RUB</button>
+        <button value="USD" id="selection-left">USD</button>
+        <button value="EUR" id="selection-left">EUR</button>
+        <button value="GBP" id="selection-left">GBP</button>
         </div>
         <div class="input-container">
-        <input class="inputLeft" type="text">
+        <input class="inputLeft" value="1" placeholder="input" >
         <div class="online-price"></div>
         </div>
     </div>
     <div class="container">
         <p>I want to buy</p>
-        <div class="buttons">
-        <button value="RUB" class="selection-right first-bttn" >RUB</button>
-        <button value="USD" class="selection-right" id="selected">USD</button>
-        <button value="EUR" class="selection-right">EUR</button>
-        <button value="GBP" class="selection-right last-bttn">GBP</button>
+        <div class="buttons2">
+        <button value="RUB" id="selection-right" >RUB</button>
+        <button value="USD" id="selection-right" class="active" >USD</button>
+        <button value="EUR" id="selection-right">EUR</button>
+        <button value="GBP" id="selection-right">GBP</button>
         </div>
         <div class="input-container">
-        <input class="inputRight">
+        <input class="inputRight" value="1" placeholder="output">
         <div class="online-currency"></div>
         </div>
     </div>
     </div>
     </main>
+    <script src="imask.js"></script>
     <script src="app.js"></script>
-    <script src=""></script>
+    
 </body>
 </html>

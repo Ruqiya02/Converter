@@ -5,7 +5,22 @@
     font-family: "Roboto";
 }
 @media screen and (min-width:801px) {
+    .online-price, .online-currency{
+        color: grey;
+        width: 20vw;
+        margin-top: 1.625vw;
+        font-size: 1.625vw;
+        margin-left:1.25vw;
+    }
     /* ---HEADER--- */
+input{
+    margin-left: 1.25vw;
+    margin-top: 1.25vw;
+}
+    .active {
+        background-color: #833ae0;
+        color: white;
+    }
 .top{
     background-color: rgba(245, 245, 246, 1);
     align-items: center;
@@ -48,34 +63,34 @@ main{
 h1{
     padding-left: 18vw; 
 }
-.buttons{
+.buttons1, .buttons2{
     display: flex;
     width: 22.483vw;
     height: 2.604vw;
 }
-.selection-left, .selection-right{
+#selection-left, #selection-right{
     width: 5.648vw;
     height: 2.604vw;
     border: 0.087vw solid rgba(229, 229, 229, 1);
     color: rgba(198, 198, 198, 1);
-    background-color: white;
+    /* background-color: white; */
     }
-.first-bttn{
+button:first-child{
     border-bottom-left-radius: 0.26vw;
     border-top-left-radius: 0.26vw;
 }
-.last-bttn{
+button:last-child{
     border-top-right-radius: 0.26vw;
     border-bottom-right-radius: 0.26vw;
 }
 button:hover{
     cursor: pointer;
 }
-#selected{
+/* #selected{
     background-color: rgba(131, 58, 224, 1);
     color: white;
     cursor: pointer;
-}
+} */
 .container{
     display: flex;
     flex-direction: column;
@@ -105,14 +120,16 @@ input{
     flex-direction: row;
     justify-content: space-evenly;
 }
-.online-price{
+/* .online-price{
     width: 10.33vw;
     height: 2.431vw;
-}
+} */
 .menuBar{
     display: none;
 }
 }
+
+
 @media screen and (min-width:320px) and (max-width:800px){
    /*---Head---*/
 .top{
@@ -182,11 +199,7 @@ h1{
 button:hover{
     cursor: pointer;
 }
-#selected{
-    background-color: rgba(131, 58, 224, 1);
-    color: white;
-    cursor: pointer;
-}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -219,8 +232,6 @@ input{
     width: 40vw;
     height: 10vw;
 }
-.menuBar{
-   
-}
+
 
 }
