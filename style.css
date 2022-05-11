@@ -8,16 +8,7 @@
 
 @media screen and (min-width:801px) {
 
-    .online-price,
-    .online-currency {
-        color: grey;
-        width: 20vw;
-        margin-top: 1.625vw;
-        font-size: 1.625vw;
-        margin-left: 1.25vw;
-    }
-
-    /* ---HEADER--- */
+    /* ________________HEAD________________ */
     input {
         margin-left: 1.25vw;
         margin-top: 1.25vw;
@@ -60,7 +51,7 @@
         color: black;
     }
 
-    /* ---MAIN--- */
+    /* ________________MAIN________________ */
     main {
         display: flex;
         flex-direction: column;
@@ -91,7 +82,6 @@
         height: 2.604vw;
         border: 0.087vw solid rgba(229, 229, 229, 1);
         color: rgba(198, 198, 198, 1);
-        /* background-color: white; */
     }
 
     button:first-child {
@@ -106,13 +96,8 @@
 
     button:hover {
         cursor: pointer;
+        background-color: #833ae0;                              
     }
-
-    /* #selected{
-    background-color: rgba(131, 58, 224, 1);
-    color: white;
-    cursor: pointer;
-} */
     .container {
         display: flex;
         flex-direction: column;
@@ -147,13 +132,16 @@
         justify-content: space-evenly;
     }
 
-    /* .online-price{
-    width: 10.33vw;
-    height: 2.431vw;
-} */
-    .menuBar {
-        display: none;
+
+    .online-price,
+    .online-currency {
+        color: grey;
+        width: 20vw;
+        margin-top: 1.625vw;
+        font-size: 1.625vw;
+        margin-left: 1.25vw;
     }
+
 }
 
 
@@ -171,11 +159,6 @@
 
     a {
         display: none;
-    }
-
-    .menuBar {
-        width: 5vw;
-        height: 5vw;
     }
 
     .logo {
@@ -217,14 +200,16 @@
         width: 40vw;
         height: 7vw;
     }
-
     .selection-left,
     .selection-right {
-        width: 80vw;
         height: 6vw;
         border: 0.087vw solid rgba(229, 229, 229, 1);
         color: rgba(198, 198, 198, 1);
         background-color: white;
+    }
+    .selected {
+        background-color: #833ae0;
+        color: white;
     }
 
     .first-bttn {
@@ -248,12 +233,15 @@
     }
 
     p {
-        margin-bottom: 0.868vw;
+        margin-bottom: 0.868vw; 
+    }
+    p:last-child{
+        margin-top: 5vh;
     }
 
     .input-container {
-        width: 40vw;
-        height: 20vw;
+        width: 80vw;
+        height: 30vw;
         border: 0.087vw solid rgba(229, 229, 229, 1);
         border-radius: 0.26vw;
         margin-top: 1.736vw;
@@ -269,9 +257,9 @@
     }
 
     .main-part {
+        align-items: center;
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: column;
     }
 
     .online-price {
