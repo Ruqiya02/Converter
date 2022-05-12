@@ -185,7 +185,7 @@
         margin-right: 5vw;
     }
     .icon-container{
-        height: 30px;
+        height: 5vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -196,18 +196,11 @@
        
     }
     .icon{
-       width: 35px;
-       height: 5px;
-       background-color: black;
+       width: 5vw;
+       height: 1vw;
+       background-color: gray;
     }
-    ul{
-        display: ;
-        border: 0.9vw solid gray;
-        width: 20vw;
-        height: 20vw;
-    }
-  
-
+    
     /* ________________MOBILE_MAIN________________ */
     main {
         display: flex;
@@ -228,17 +221,19 @@
 
     .buttons-Left .buttons-Right {
         display: flex;
-        width: 40vw;
-        height: 7vw;
     }
-    .selection-left,
-    .selection-right {
-        height: 6vw;
-        border: 0.087vw solid rgba(229, 229, 229, 1);
-        color: rgba(198, 198, 198, 1);
-        background-color: white;
+    #selection-left,
+    #selection-right {
+        width: 10vw;
+        height: 5vw;
+        border: 0.03vw solid rgba(229, 229, 229, 1);
+        /* color: rgba(198, 198, 198, 1); */
+        border: 0;
     }
     .selected {
+        border: 0;
+        width: 10vw;
+        height: 5vw;
         background-color: #833ae0;
         color: white;
     }
@@ -265,10 +260,9 @@
 
     p {
         margin-bottom: 0.868vw; 
+        margin-top: 3.5vw;
     }
-    p:last-child{
-        margin-top: 5vh;
-    }
+    
 
     .input-container {
         width: 80vw;
@@ -276,12 +270,15 @@
         border: 0.087vw solid rgba(229, 229, 229, 1);
         border-radius: 0.26vw;
         margin-top: 1.736vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     input {
         outline: none;
         border: none;
-        width: 40vw;
+        width: 80vw;
         height: 10vw;
         font-size: 7vw;
         font-weight: 900;
@@ -291,11 +288,11 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .online-price {
-        width: 40vw;
-        height: 10vw;
+        
     }
 
 
