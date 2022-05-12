@@ -1,8 +1,14 @@
-  let inputLeft = document.querySelector(".inputLeft")
-  let inputRight = document.querySelector(".inputRight")
-  let from = 'RUB',to = 'USD'
+  const inputLeft = document.querySelector(".inputLeft")
+  const inputRight = document.querySelector(".inputRight")
+  const from = 'RUB',to = 'USD'
+  const menu=document.querySelector(".icon-container")
+  const link=document.querySelectorAll("a")
+  const list=document.querySelector('ul')
+  menu.addEventListener("click",()=>{
+      link.style.display='block'
+      })
   
-  let numberMask1 = IMask(inputLeft, {
+  var numberMask1 = IMask(inputLeft, {
     mask: Number,
     scale: 5,
     signed: false,
@@ -12,7 +18,7 @@
     radix: '.',
     mapToRadix: [','],
   });
-  let numberMask2 = IMask(inputRight, {
+  var numberMask2 = IMask(inputRight, {
     mask: Number,
     scale: 5,
     signed: false,

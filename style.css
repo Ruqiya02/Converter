@@ -7,16 +7,14 @@
 }
 
 @media screen and (min-width:801px) {
+    ul{
+        display: none;
+    }
 
-    /* ________________HEAD________________ */
+    /* ________________DESKTOP_HEAD________________ */
     input {
         margin-left: 1.25vw;
         margin-top: 1.25vw;
-    }
-
-    .selected {
-        background-color: #833ae0;
-        color: white;
     }
 
     .top {
@@ -50,8 +48,11 @@
         cursor: pointer;
         color: black;
     }
+    .icon{
+        display: none;
+    }
 
-    /* ________________MAIN________________ */
+    /* ________________DESKTOP_MAIN________________ */
     main {
         display: flex;
         flex-direction: column;
@@ -82,6 +83,10 @@
         height: 2.604vw;
         border: 0.087vw solid rgba(229, 229, 229, 1);
         color: rgba(198, 198, 198, 1);
+    }
+    .selected {
+        background-color: #833ae0;
+        color: white;
     }
 
     button:first-child {
@@ -147,7 +152,7 @@
 
 @media screen and (min-width:320px) and (max-width:800px) {
 
-    /*---Head---*/
+    /*________________MOBILE_HEAD________________*/
     .top {
         background-color: rgba(245, 245, 246, 1);
         align-items: center;
@@ -164,9 +169,11 @@
     .logo {
         width: 20vw;
         height: 15vw;
+        margin-left: 3vw;
     }
 
     .signIn {
+        display: none;
         width: 15vw;
         height: 8vw;
         background-color: white;
@@ -175,9 +182,33 @@
         color: black;
         font-weight: 600;
         font-size: 2.5vw;
+        margin-right: 5vw;
     }
+    .icon-container{
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 3vw;
+    }
+    .icon-container:hover{
+        cursor: pointer;
+       
+    }
+    .icon{
+       width: 35px;
+       height: 5px;
+       background-color: black;
+    }
+    ul{
+        display: ;
+        border: 0.9vw solid gray;
+        width: 20vw;
+        height: 20vw;
+    }
+  
 
-    /* ---MAIN--- */
+    /* ________________MOBILE_MAIN________________ */
     main {
         display: flex;
         flex-direction: column;
