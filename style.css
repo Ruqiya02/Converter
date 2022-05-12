@@ -6,12 +6,12 @@
     font-family: "Roboto";
 }
 
+
 @media screen and (min-width:801px) {
-    ul{
+    /* ________________DESKTOP_HEAD________________ */
+    li{
         display: none;
     }
-
-    /* ________________DESKTOP_HEAD________________ */
     input {
         margin-left: 1.25vw;
         margin-top: 1.25vw;
@@ -51,7 +51,6 @@
     .icon{
         display: none;
     }
-
     /* ________________DESKTOP_MAIN________________ */
     main {
         display: flex;
@@ -153,6 +152,33 @@
 @media screen and (min-width:320px) and (max-width:800px) {
 
     /*________________MOBILE_HEAD________________*/
+    .icon2{
+        width: 5vw;
+        height: 1vw;
+        background-color: #833ae0;
+    }
+    #clicked{
+        display: none;
+    }
+
+    ul{
+        display: none;
+        position: absolute;
+        width: 50vw;
+        height: 100vh;
+        background-color: rgba(245, 245, 246, 1);
+        color: black;
+        font-weight: 600;
+        font-size: 4vw;
+        justify-content: space-evenly;
+    }
+    li{
+        border-bottom: 0.5vw solid white;
+        padding: 6vw;
+    }
+    li:hover{
+        cursor: pointer;
+    }
     .top {
         background-color: rgba(245, 245, 246, 1);
         align-items: center;
@@ -169,11 +195,10 @@
     .logo {
         width: 20vw;
         height: 15vw;
-        margin-left: 3vw;
+        margin-right: 3vw;
     }
 
     .signIn {
-        display: none;
         width: 15vw;
         height: 8vw;
         background-color: white;
@@ -189,7 +214,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-right: 3vw;
+        margin-left: 3vw;
     }
     .icon-container:hover{
         cursor: pointer;
@@ -200,7 +225,6 @@
        height: 1vw;
        background-color: gray;
     }
-    
     /* ________________MOBILE_MAIN________________ */
     main {
         display: flex;
@@ -226,8 +250,6 @@
     #selection-right {
         width: 10vw;
         height: 5vw;
-        border: 0.03vw solid rgba(229, 229, 229, 1);
-        /* color: rgba(198, 198, 198, 1); */
         border: 0;
     }
     .selected {
@@ -291,9 +313,6 @@
         justify-content: space-evenly;
     }
 
-    .online-price {
-        
-    }
 
 
 }

@@ -1,6 +1,18 @@
   const inputLeft = document.querySelector(".inputLeft")
   const inputRight = document.querySelector(".inputRight")
-  
+  const menuIcon=document.querySelector(".icon-container")
+  const clickedIcon=document.getElementById("clicked")
+  const menu=document.querySelector("ul")
+  menuIcon.addEventListener("click",()=>{
+    menuIcon.style.display="none"
+    menu.style.display="block"
+    clickedIcon.style.display="flex"
+  })
+  clickedIcon.addEventListener("click",()=>{
+    menuIcon.style.display="flex"
+    menu.style.display="none"
+    clickedIcon.style.display="none"
+  })
   let from = 'RUB',to = 'USD'
   let numberMask1 = IMask(inputLeft, {
     mask: Number,
@@ -92,7 +104,6 @@
 
   const p1 = document.querySelector(".online-price")
   const p2 = document.querySelector(".online-currency")
-  
   function onlineCurrency() {
     fetch(`https://api.exchangerate.host/latest?base=${from}&symbols=${to}`)
       .then(response => response.json())
