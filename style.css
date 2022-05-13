@@ -165,7 +165,6 @@
         display: none;
         position: absolute;
         width: 50vw;
-        height: 100vh;
         background-color: rgba(245, 245, 246, 1);
         color: black;
         font-weight: 600;
@@ -248,8 +247,8 @@
     }
     #selection-left,
     #selection-right {
-        width: 10vw;
-        height: 5vw;
+        width: 14vw;
+        height: 7vw;
         border: 0;
     }
     .selected {
@@ -258,16 +257,6 @@
         height: 5vw;
         background-color: #833ae0;
         color: white;
-    }
-
-    .first-bttn {
-        border-bottom-left-radius: 0.9vw;
-        border-top-left-radius: 0.9vw;
-    }
-
-    .last-bttn {
-        border-top-right-radius: 0.9vw;
-        border-bottom-right-radius: 0.9vw;
     }
 
     button:hover {
@@ -287,8 +276,8 @@
     
 
     .input-container {
-        width: 80vw;
-        height: 30vw;
+        width: 60vw;
+        height: 28vw;
         border: 0.087vw solid rgba(229, 229, 229, 1);
         border-radius: 0.26vw;
         margin-top: 1.736vw;
@@ -300,7 +289,7 @@
     input {
         outline: none;
         border: none;
-        width: 80vw;
+        width: 60vw;
         height: 10vw;
         font-size: 7vw;
         font-weight: 900;
