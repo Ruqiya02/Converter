@@ -4,7 +4,7 @@
   const clickedIcon=document.getElementById("clicked")
   const menu=document.querySelector("ul")
   inputLeft.addEventListener('input', () => {
-    if (inputLeft.value[1] == ".") {} else if (inputLeft.value[0] == 0 && inputLeft.value.length > 1) {
+    if (inputLeft.value[1] == "." || inputLeft.value[1] == "," ) {} else if (inputLeft.value[0] == 0 && inputLeft.value.length > 1) {
         inputLeft.value = inputLeft.value[1];
     }
     else if(inputLeft.value[0]==="."){
@@ -15,7 +15,7 @@
 }
 })
 inputRight.addEventListener('input', () => {
-    if (inputRight.value[1] == ".") {} else if (inputRight.value[0] == 0 && inputRight.value.length > 1) {
+    if (inputRight.value[1] == "." || inputRight.value[1] == ",") {} else if (inputRight.value[0] == 0 && inputRight.value.length > 1) {
         inputRight.value = inputRight.value[1];
     }
     else if(inputRight.value[0]==="."){
