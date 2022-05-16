@@ -7,12 +7,25 @@
     if (inputLeft.value[1] == ".") {} else if (inputLeft.value[0] == 0 && inputLeft.value.length > 1) {
         inputLeft.value = inputLeft.value[1];
     }
+    else if(inputLeft.value[0]==="."){
+     inputLeft.value=""
+}
+  else if(inputLeft.value[0]===","){
+  inputLeft.value=""
+}
 })
 inputRight.addEventListener('input', () => {
     if (inputRight.value[1] == ".") {} else if (inputRight.value[0] == 0 && inputRight.value.length > 1) {
         inputRight.value = inputRight.value[1];
     }
-})
+    else if(inputRight.value[0]==="."){
+      inputRight.value=""
+    }
+    else if(inputRight.value[0]===","){
+      inputRight.value=""
+    }
+    })
+
   menuIcon.addEventListener("click",()=>{
     menuIcon.style.display="none"
     menu.style.display="block"
